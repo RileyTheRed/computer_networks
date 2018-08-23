@@ -1,0 +1,67 @@
+History
+
+- Communications is a human urge
+    ex: drum signals, fire, smoke
+
+- Ancient Greeks
+    ex: signal fires, couriers (marathon)
+
+- Napoleonic France
+    ex: optical telegraph
+
+- Mid-18002
+    ex: telegraph
+    - wire accross the atlantic in 1866
+    (victorian internet)
+
+- 1870 - > 1970
+    ex: telephone
+
+- 1970 -> now
+    ex: internet, packet switching
+
+
+
+What are the challenges with making all this communication faster/efficient?
+
+
+- Fundamental Measures:
+    1: throughput
+    2: delay
+    3: loss
+    4: cost
+    5: mobility
+    6: robustness
+    7: secrecy
+    8: differentiated services
+
+
+Cost comes in two forms:
+    - capital expense
+        ex: hardware, copper
+    - operational expense
+        ex: power, employees
+
+
+What are the challenges???
+    - Higher throughput
+    - lower delay/loss/cost
+    - higher mobility/robustness/secrecy
+
+
+Two fields of Study:
+    1: information theory - What is the theoretical max throughput for a
+        channel?
+
+    2: Coding Theory: How do I achieve max throughput?
+
+
+Communication Tasks:
+    - data formatting
+    - error detection + recovery
+    - addressing
+    - routing
+    - flow control
+    - system management
+    - security
+    - quality of service

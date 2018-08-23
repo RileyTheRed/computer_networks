@@ -1,0 +1,98 @@
+Two Network Types:
+
+    - Curcuit Switched:
+        -- dedicated physical connection
+            --- more consistent performance, no loss due to over sharing
+            ex: "bell heads"
+    
+    - Packet Switched:
+        -- shared physical connection
+        -- chunks of data called packets
+            --- better utilization of resources
+            ex: "net heads"
+
+
+
+A concept of functional layers, each layer handles a specific task
+
+ ** see papers ** 
+
+
+OSI Model:
+
+    7 - Application - Provides access to user applications
+    6 - Presentation - Provides data independence
+    5 - Session - Manages end-to-end connections
+    4 - Transport - Provides reliable end-to-end data trasnport
+    3 - Network - Maintains point-to-point connections
+    2 - Data Link - Provides reliable point-to-point data transport
+        -- Error Detection
+
+    1 - Physical - Transmission of bit stream
+        -- EE layer
+
+
+Networks: Has to do with layers 4,3,and 2
+OS: has to do with layers 7,5,and 6
+
+
+
+Definitions!
+
+    Protocol - Complete set of rules for information exchange between same
+               layers at different sites
+
+    Interface - Complete set of rules for information exchange between adjacent
+                layers at the same site
+
+    Open Concept - The ability of any two systems conforming to the reference
+                   model and associated standards to connect.
+
+    Layering Concept - Each layer performs unique and specific tasks
+                       Knowledge of adjacent layers only
+                       Uses services of the layer below
+                       Provides functions to the layers above
+                       Layer service is independent of implementation
+
+    
+
+Internet Model (Stack Model):
+
+    This is the model that we will be using for the course
+
+    5 - Application
+        -- HTTP
+
+    4 - Transport
+        -- TCP, UDP
+
+    3 - Network
+        -- IP
+
+    2 - Link
+    1 - Physical
+
+
+    Layers 1 and 2 are exemplified by Wifi and Ethernet
+        -- Wifi ( 802.11 )
+        -- Ethernet ( 802.3 )
+
+
+Standards Organizations:
+
+    - The first standards that came about were weights and measures
+
+    - IEEE 802
+        -- standardized local network communications
+    - ISO
+    - ITU
+        -- International Telegraphy Union (phone standards)
+        -- very closed, also French :/
+    - IETF  **
+        -- Internet Engineering Task Force
+        -- Important to us
+        -- Open! Anyone can go to meetings and stuff
+        -- as standards are development and formatted, they are available online
+
+    Standards are great for discouraging monopolies, but they hold back tech
+    inovations. It also ensures a large market (good thing!)
