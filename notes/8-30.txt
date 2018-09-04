@@ -1,0 +1,110 @@
+Blockchain
+    - Distrubuted application ledger
+
+
+WARRIORS OF THE NET
+
+    -Firewall
+        --
+    -Port
+        --TCP address
+    -Port 80
+        --Web
+    -Port 25
+        --Mail
+    -ICMP
+        --control packet
+    -Ping of Death
+        --vulnerablility
+    -LAN
+        --local area network
+    -UDP
+        --user datagram protocol
+    -Proxy server
+        --cache
+        --buffer that can store info that comes in
+    -Network interface
+        --port with a wire, or wireless
+    -Address 
+        --your name
+        --layer 2 and 3
+    -Bandwidth
+        --data rate
+        --bits per second
+    -Ping
+        --sepcial ICMP packet
+        --gets returned immediatley
+
+
+Goals of the Internet:
+    
+    - Clark:
+        -- Key architect of the internet
+    
+    - Top Level Goal
+        -- To develop an effective method for multiplexed utilization of
+           existing networks
+            --- Packets!!
+
+        
+    - Second Level Goals (Doesnt really include security)
+        1) Communications must continue despite loss of networks or gateways
+        2) Multiple types of communication service
+        3) Accomodate variety of networks
+        4) Distributed management 
+        5) Cost effective
+        6) Host attachment is not difficult
+        7) Resources used must be accountable
+
+
+Networks Under Attack
+
+    - Internet is "mission critical" for economy
+        -- Internet goes down, we go home
+    - Bad guys
+        -- Vandals
+        -- Criminals 
+        -- Foreign entities
+        
+
+        - What can they do?
+            -- Sniff packets
+            -- Put malware on your host
+            -- Denial of service
+            -- Masquerade as you
+
+Security is the probably the biggest problem/challenge of the internet today
+
+
+
+Quality of Service
+    - Network provisioning 
+    - Design a network to provide a specific level of service
+        -- throughput
+        -- delay
+        -- loss
+        -- "up" time
+
+    - Service level agreement (SLA)
+        -- per connection
+        -- per month
+
+    - Different applications have different requirements
+        -- data
+            - high throughput
+            - variable delay
+            - some loss
+        -- voice
+            - some loss
+            - fixed delay
+            - low throughput
+        -- remote control
+            - low throughput
+            - low delay
+            - no loss
+
+    - Implementation
+        1) Admission control
+        2) Packet classification
+            - voice/data/etc
+        3) Traffic shaping/scheduling

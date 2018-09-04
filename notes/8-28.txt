@@ -1,0 +1,131 @@
+What is the Internet?
+--------------------
+
+Physical View
+    - billions of devices
+    - links
+        -- copper
+        -- fiber
+        -- wireless
+
+Serivce View
+    - Distributed Applications
+        -- Remote login
+        -- Email
+        -- File sharing
+        -- Web
+        -- Voice
+        -- Many others!
+
+    Most serveices are based off of a:
+        - Client/server model
+            -- client request services
+            -- server provides services
+
+Edge View
+    - Connection Oriented (TCP)
+        -- guaranteed delivery of data
+            (sometimes updates are not real time)
+    - Connectionless (UDP)
+        -- no guarantee 
+            (this serves real time updates)
+
+Core View
+    - Packet-switching
+        -- shared path
+        -- data sent in blocks
+
+Packet View
+    - Datagram
+        -- path is not reserved
+        -- more robust
+    - Virtual Circuit
+        -- reserved path
+        -- guarantees that packets arrive in order
+        -- less robust
+
+Media View
+    - Copper
+        -- un-shielded
+        -- coax
+    - Fiber
+        -- multimode
+        -- singlemode
+        -- "Infinite" Bandwidth
+        -- Costly
+        -- No lightning damage
+        -- very hard to tap
+
+
+
+Delay + Loss
+------------
+
+Four Factors for Delay
+    1) Processing 
+        - "code path" to write and read headers
+    2) Transmission
+        - time it takes to push the packet on the wire
+        - Txnit = L / R
+            -- L = length of packet
+            -- R = bandwidth in bits/sec
+    3) Propagation
+        - Distance, speed of light
+            -- 1ft ~ 1ns
+            -- 1mile ~ 5 micro sec
+            -- Accross USA ~ 15ms
+        - Only thing to do to cut down on prop. delay is to close distance
+    4) Queueing
+        - buffering in nodes
+            -- difficult to determine
+
+
+Tools
+    - Ping
+    - Trace Route
+
+Loss
+    Two Cause:
+        1) Electrical Noise
+        2) Buffer Overflow
+            - Predominant
+
+
+
+Internet History
+----------------
+1961
+    - Kleinrock
+        -- invents packet switching
+        -- PhD student at MIT
+
+1967
+    - ARPA Net
+        -- developed by DoD
+        -- Nuke Proof
+        -- Fully Distributed
+1972
+    - First demo with 15 nodes
+
+1973
+    - Ethernet (Metcalfe)
+        -- Harvard
+
+1979
+    - 200 nodes
+
+1983
+    - TCP
+
+1985
+    - FTP
+
+1991
+    - Commercial Use Allowed
+
+1994
+    - Mosaic Browser
+
+Late 1990's
+    - Commercialization
+        -- Dotcom boom and bust

@@ -1,0 +1,90 @@
+Today: Chapter 2
+
+Protocol
+--------
+Complete set of rules for info exchange between same level layers layers at
+different sites
+
+A protocol is to a network as a program is to a computer
+    - implement algorithms for networks
+
+Five Elements
+    1) Service to be provided
+    2) Assumptions about the environment
+    3) Vocabulary of messages
+    4) Encoding (format) of messages
+    5) Procedure rules
+
+
+Application Layer
+-----------------
+Email
+Web
+File Sharing
+Remote Login
+Multiplayer games
+Texting
+Netflix
+
+Process - A running program
+    - User interface
+    - Network Interface
+
+HTTP
+    - Hypertext Transfer Protocol
+SMTP
+    - Simple Mail Transfer Protocol
+FTP
+    - File Transfer Protocol
+Others...
+
+
+All the above protocols are based on the:
+Client/server model
+
+Client          request         Server
+------          ======>         ------
+|    |          <======         |    |
+|    |          response        |    |
+------                          ------
+
+
+HTTP
+----
+Web page
+    - A .html file
+    - embedded images
+
+HTTP 1.0
+HTTP 1.1
+    - IETF standard
+
+    - RFC 1945
+    - RFC 2068
+        -- each coincide with http 1.0 and 1.1, respectively 
+
+Requests
+    - GET
+    - POST
+    - PUT
+    - HEAD
+
+Response
+    - Response Code
+        -- 200 = OK
+        -- 404 = Not found
+    - File
+
+Packet Format
+(See notes)
+
+
+HTTP is 100 Words or less!
+- The hypertext transfer protocol is an application layer protocol. HTTP is used
+  to transfer web content between a browser application and an HTTP server. All
+web content is identified by a URL. HTTP is a request-response protocol that
+uses TCP for assured delivery. HTTP uses ASCII encoded headers. The HTTP GET
+command retrieves HTML files and other objects. The GET header includes the URL
+of the object and other optimal fields such as capability, language, and so on.
+The response includes a response header with a code (code 200 is OK and 400 is
+page not found). Other commands include POST and HEAD.
