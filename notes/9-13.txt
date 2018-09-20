@@ -1,0 +1,6 @@
+ SOCKETS
+--------
+accept() blocks
+recv() blocks
+
+

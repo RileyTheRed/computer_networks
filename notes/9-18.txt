@@ -1,0 +1,40 @@
+Threads and Processes
+---------------------
+
+    - Multitasking
+
+    - threads "lightweight"
+        -- functions that run and parallel
+        -- shares memory space
+
+        -- two flavors
+            --- Windows
+            --- Posix
+
+        -- use global and local variables
+        -- watch out for race conditions
+
+    - processes
+        -- program
+        -- has its own memory space
+
+
+Webserver (HTTP 1.0)
+---------
+
+    1) Wait for a connection
+    2) Make the connection
+    3) Receive HTTP command and parse
+    4) Find the requested stuff
+    5) Respond with requested stuff
+    6) Drop the connection
+
+    - Steps 1 and 2 are in main()
+    - Steps 3-6 are in a thread
+
+    - Performance Hot Spots
+        1) File I/O
+            - Caching!!!
+        2) Threads (starting)
+            - Thread pooling
+                -- Dont kill threads, re-use them

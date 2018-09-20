@@ -1,0 +1,74 @@
+Persistent Connections
+----------------------
+    - HTTP 1.0 opens a TCP connection for every GET
+
+    <html><body>
+    This is text
+    <img src="mypic.jpg">
+    </body></html>
+
+    - HTTP 1.0
+        -- RTT_connect + RTT_get + RTT_connect + RTT_get
+        -- (There are other things ex: processing delay, etc)
+
+    - HTTP 1.1
+        -- RTT_connect + RTT_get + RTT_get
+
+
+Web Caching
+-----------
+    - We cache satisfies (answers) requests on behalf of a web server.
+
+    (See notes)
+    - If you dont set your browser up correctly, you may never get fresh content
+
+    - Benefits
+        -- Improves user experience
+        -- Reduce bandwidth use
+        -- Reduces load on server  ****
+
+    - Downside
+        -- Risk for stale content
+
+    - Fill up automatically depending on requests
+
+
+Content Distribution Network (CDN)
+----------------------------------
+    - Akamai
+
+    - Cluster of servers throughout the internet
+    - Pre-load with popular content
+
+    - Challenges
+        -- Where to put the servers
+        -- What content to preload
+
+
+FTP
+---
+    - Moves files from/to server
+    - Uses two TCP connections
+        -- data
+            --- files flow over this connection
+        -- control
+            --- commands flow over this connections
+            --- Commands (requests)
+                -USER
+                -PASS
+                -LIST
+                -RETR
+                -STOR
+            --- Replies (responses)
+                - 321 Username OK
+    - If TCP connection drops, have to reconnect and start file transfer over
+
+
+SMTP
+----
+    - Simple Mail Transfer Protocol
+        -- RFC 5321
+
+    - User Agents
+        -- email program
+    - Mail Servers
