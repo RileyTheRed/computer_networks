@@ -1,0 +1,84 @@
+REVIEW
+------
+
+Sockets - interface between app. and trans. layers
+
+transport layer - end-2-end data trasnfer
+
+
+
+
+- All end-nodes (hosts) have all 5 layers
+- All intermediate nodes have layer 1,2,3
+
+
+LAYER 4
+-------
+
+- Services
+    1) Multiplexing/demultiplexing
+    2) reliable data transport
+    3) congestion control
+    
+
+Multiplex/demultiplex
+    - multiple applicatoons
+        -- port numbers
+            - in our application, it becomes a socket
+                -- each process has unique
+
+
+Reliable Data Transport
+    - A game!
+        -- design a protocol to reliably deliver 4x5 cards across the room
+        -- cards can get
+            - lost
+            - out-of-order
+            - altered
+            - duplicates
+
+        -- Checksum
+            - # letters on a card
+        -- sequence #
+
+Protocol Criteria
+    - Correct
+    - High throughput
+    - Simple to implement
+        -- You have to be able to describe it
+
+
+
+Finite State Machine (FSM)
+--------------------------
+State
+Transition
+    - has an event
+    - has an action
+
+
+Events
+    - receive something
+    - timer expires
+    - counter hits some value
+Actions
+    - send something
+    - start a timer
+    - increment a counter
+
+
+Example:
+If a fully power-up system has been inactive for a period of time, it goes to
+sleep. When asleep if it receives a special wake-up packet, it wakes up.
+Activity is user input
+
+
+BOOK
+----
+
+RDT 1.0
+    - No bit errors
+    - no packet loss
+
+Protocol Pictures
+(in book)
