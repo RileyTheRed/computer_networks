@@ -1,0 +1,52 @@
+RDT in book (pages 206-218)
+
+What bad things could happen to the packet?
+    - Packet is lost
+    - Packet is corrupted
+        -- detected
+        -- undetected
+    - Out of order delivery
+    - Duplicated
+
+
+Which of the above is helped with sequence numbers?
+    - Packet is lost
+
+    - Without sequence #, receiver cannot know if a received packet is a
+      duplicate (e.g., due to lost ACK)
+
+
+What do we do with our newly created protocol? Analize it!
+
+Utilization Analysis
+--------------------
+
+U = t-useful / (t-useful + t-overhead)
+
+
+(See notes)
+This protocol isnt all that great. So we create a new one, which can have
+multiple outstanding packets for an ACK.
+
+This new protocol is called a sliding window protocol (SW)
+
+But what happens if there is some loss? 
+    - prob(packet loss) > 0
+
+    - Given bit error rate, we can derive rate of packet loss
+
+
+
+Transport Later Challenges
+--------------------------
+How do we know receiver is there?
+    - Connection semantic
+What should time-out be set to?
+    - Too short
+    - Too long
+
+    - Sample average RTT and set to about that average
+
+What rate to start transmitting?
+    - Not too slow, not too fast
+    - Start small, and if you keep getting ACKs then increase window size

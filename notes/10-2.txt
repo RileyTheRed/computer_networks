@@ -1,0 +1,109 @@
+Review From Last Class
+----------------------
+    - Sample on non retransmits
+    - Double RTO on timeout
+        -- Avoids a loop of double sending
+
+    - Congestion Control
+        -- Use window size to modulate sending rate
+        -- Implicit detection of loss
+
+        -- Slow start
+        -- Congestion avoidance
+        -- Sawtooth
+
+
+
+Congestion Control
+------------------
+Congestion occurs because of sharing, that is the essence of packet switched
+networks.
+
+Goals:
+    - Minimize packet loss
+    - Maintain with high probability agreed-upon QoS
+    - Minimize probability that one user can monoploize
+    - Simple
+    - Create minimal additional traffic
+    - Limit spread of congestion
+    
+    In Short:
+        High Throughput
+        Low Delay
+        Fair
+
+
+Detecting Congestion
+--------------------
+    - Implicit
+        -- Time-out implies packet loss implies congestion
+            --- e.g., TCP
+    - Explicit
+        -- Control message back to sender
+
+Control Sending Rate
+--------------------
+    - Change window size
+    - Rate control
+
+
+Fairness
+--------
+    - Trade-off is throughput vs. fair
+
+    - Proportional
+        
+    - Max-Min
+
+
+    - Example:
+        Have 12 cards to allocate. Three people want something.
+            A wants 2
+            B wants 6
+            C wants 20
+
+        Proportionally:
+            A = (2 / (2 + 6 + 20)) * 12 = 6/7
+            B = (6 / (2 + 6 + 20)) * 12 = 18/7
+            C = (20 / (2 + 6 + 20)) * 12 = 60/7
+
+            - Cheating benefits me
+
+        Max-Min:
+            
+            First Round:
+                Give A 4
+                    - 2 left over, A is happy
+                Give B 4
+                Give C 4
+
+            Second Round:
+                A = 2
+                B = 4 + 1 = 5
+                C = 4 + 1 = 5
+
+            - Cheating does not benefit me
+
+
+Max-Min:
+    - Resources allocates is order of increasing demand
+        (Spread out equally)
+    - No source gets more than its demand
+    * Sources with unsatisfied demand get an equal share of resource
+
+
+
+
+Security
+--------
+Jumping to chapter 8
+
+    - What is network security?
+        1) confidentiality
+            -- only sender and receiver understand message
+        2) Authentication
+            -- sender, receiver want to confirm identity
+        3) Message Integrity
+            -- message not altered
+        4) Availability + Access
+            -- services need to be accessible

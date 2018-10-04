@@ -1,0 +1,89 @@
+For what environment does SAW give poor performance?
+    - Large RTT
+How to fix poor performance?
+    - See notes for the information for sending a lot of packets.
+
+
+Transport Layer Challenges
+--------------------------
+How do we know the receiver is there?
+What should timeout be?
+What rate to start sending?
+
+
+TCP Flags
+---------
+    - URG
+    - ACK
+        -- An acknowledgement
+    - PSH
+    - RST
+        -- Reset
+        -- Great Firewall of China, other firewalls can use this to close your
+           request for some connection
+    - SYN
+        -- Synchronize
+    - FIN
+        -- Last packet
+
+
+(Notes for connection diagram)
+
+SYN-Attack (SYN-Flooding)
+    - Bad guy keeps sending syn's, server continuously allocates memory until
+      no more memory is left
+
+    - SYN-cookies fix this attack
+
+
+RTO
+---
+Retransmission Timeout
+
+    - Local RTO = RTT + a smidgen
+
+The Old Way
+==========
+SRTT = Smooth RTT
+                                        ** RTT SAMPLE **
+    - SRTT(k + 1) = alpha * SRTT(k) + (1 - alpha)*RTT(k+1)
+    - RTO(k+1) = beta*SRTT(k+1)
+
+    alpha = 1/2
+    beta = 2
+
+    - Stop sampling on retransmission
+    - Doubling RTO for each resend
+
+
+The New Way
+===========
+    - SRTT(k+1) = (1-g)*SRTT(k) + g*RTT(k+1)
+    - SERR(k+1) = RTT(k+1) - SRTT(k)
+    - SDEV(k+1) = (l=h)*SDEV(k) + h*|SERR(k+1)|
+    - RTO(k+1) = SRTT(k+1) + f*SDEV(k+1)
+
+    g = 1/8
+    h = 1/4
+    f = 4
+
+
+TCP Response to Congestion
+--------------------------
+TCP must reduce transmit rate when congestion occurs.
+Time-out is implicit detection of congestion.
+
+How do deal with this as a sender?
+    - Reduce window size
+        -- Multiplicative decrease
+        -- Additive increase
+
+    - Lots of details and nuances
+    - Not a lot of verisons of TCP, but where they are different is how the
+      handle window sizes
+
+
+UDP IN FIVE MINUTES
+-------------------
+User Datagram Protocol.
+Best Effort.

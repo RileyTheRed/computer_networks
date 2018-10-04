@@ -1,0 +1,98 @@
+Review
+------
+Congestion Control
+    - High throughput
+    - Low delay
+    - fair
+
+Detect Congestion
+    - Implicit
+    - Explicit
+        -- congestion notification bit
+
+Control
+    - Change window size in TCP
+    - Rate control
+        -- Discard eligible bits
+    - Fairness
+        -- proportional
+        -- max-min
+
+
+Network Security
+----------------
+    1) Confidentiality
+    2) Authentication
+    3) Message Integrity
+    4) Availability
+
+
+Confidential Communication
+
+    - Cryptosystem
+        -- private
+            - Alice and bob have a shared secret
+                -- Key distribution is the problem
+        -- public
+            (see below)
+
+    - plain text
+        -- unencrytped
+    - cipher text
+        -- encrypted
+
+Cryptography 
+    We ave:
+        - Key
+        - algorithm
+        - plain text
+        - cipher text
+
+    - plain text + key -> algorithm -> cipher text
+    - cipher text + key -> algorithm -> plain text
+
+    - given the algorithm and cipher text, you can not derive the plain text or
+      key
+
+    - DES
+        -- Data encryption standards
+    - AES
+        -- Advanced encryption standards
+    - NIST
+        -- National institute of standards and technology
+
+
+Public Key Cryptosystem
+-----------------------
+(See notes)
+
+    - Vulnerability
+        -- How does Alice know that Kb+ is really from Bob?
+            - Certificate Authority
+
+Private key cryptosystems require less CPU horsepower to encrypt and decrypt
+text.
+
+Authentication
+--------------
+Goal: Alice wants to prove her identity to Bob
+
+    - AP1.0
+        -- Alice sends "M" to bob
+            - M = "I am alice"
+        
+        -- Failure = Trudy can also send "I am Alice"
+
+    - AP2.0
+        -- Lets send a message AND her IP address
+
+    - AP3.0
+        -- Alice sends "m" to Bob
+            - m = IP Address, Password, "I am alice"
+
+
+    (Everything we have described so far is vulnerable to "playback attacks")
+
+    
+    - AP4.0
+        -- (See notes)
