@@ -1,0 +1,124 @@
+Review
+------
+Firewalls
+    - packet filter
+        -- stateless
+        -- stateful
+
+How to get through?
+    - Use a port for nefarious access, crash firewall.
+
+
+
+Intrusion Detection System (IDS)
+--------------------------------
+    - Determine if attack has/is occurred/occurring
+    - Detect
+        -- Signature
+            - Generates an alert
+        -- Anomaly
+
+    - Port scan attacker systematically checks connections to look for open
+      ports
+
+Anomaly Detection
+-----------------
+    - Login to boss account at 3am
+
+
+Alerts
+------
+    - True positive
+    - False positive
+    - True negative
+    - False negative
+
+    - SNORT (?)
+    - BRO (?)
+
+
+Denial of Service (DoS)
+-----------------------
+    - Making a resource unavailable
+        -- overload the system and crash it
+    - Many senders ... one attackee
+    - Botnet
+        -- many hosts, used to send packets at high rate of speed
+
+    - Cascading failures
+
+
+SSL (Secure Sockets Layer)
+--------------------------
+    - A means of securing TCP connections
+    - HTTPS
+    - (See book, I kind of already know this)
+
+
+VPN (Virtual Private Network)
+-----------------------------
+    - Provide private communication on a public network
+    - Basics
+        -- Tunneling
+            - Multihop path looks like one hop
+        -- Authentication
+        -- Access Control
+        -- Data Security
+
+    - VPN software as gateways
+
+
+
+Project
+--------
+    - Hidden web server
+    - Port knocking to open hidden server
+        -- NO PLAYBACK
+    - No SSL
+    - No Firewall
+
+
+Networking Layer (Layer 3)
+--------------------------
+    - All nodes have layers 1 to 3
+    - End nodes also have layers 4 and 5
+
+    - The primary function of a network is to deliver packets from a sender to a
+      receiver
+        -- Key is a path or route
+
+    - Key functions
+        -- Forwarding of packets
+            - How to choose port to forward to? (physical port)
+        -- Routing
+            - How to choose a path?
+
+    - Two Flavors
+        -- Datagram
+            - each packet is routed individually
+            - connection exists at layer 4 (not 3)
+            - out-of-order can happen
+            - (Netheads)
+        -- Virtual Circuit
+            - establish a path at layer 3
+                -- connection
+            - all packets flow over same path
+            - intermediate nodes maintain connection state
+            - can have mission control (can deny connections)
+            - (Bellheads)
+
+    - What is the best route from A to B?
+        -- Least hops
+            - Static
+        -- Fastest links
+            - Static
+        -- Least congestion
+        -- Lowest delay
+        -- Most secure
+            - Static
+
+        -- All of the above are notions of a metric "least cost"
+
+    - How select route?
+        -- Centralized
+        -- Distributed

@@ -1,0 +1,72 @@
+10/11 - HW #4 due
+10/16 - Exam review
+10/18 - Exam
+10/23 - Drop date
+
+CRACKING THE CODING INTERVIEW
+-----------------------------
+Must have if I want to go work for any of the big tech companies
+
+
+
+Review
+------
+    - Private
+        -- Symmetric
+        -- Shared secret
+    - Public
+        -- Can talk privately with someone I have NOT met
+
+
+    - Elements of a crypto-system
+        -- Algorithm
+        -- Key
+        -- Plaintext
+        -- Cyphertext
+
+
+
+Authentication
+--------------
+(See notes)
+
+
+
+Digital Signatures
+------------------
+Verify sender
+Verify message integrity
+
+
+
+Message integrity with a hash
+-----------------------------
+Hash?
+
+    - String -> hash -> signature (smaller than string)
+
+    - Integrity
+        -- Can verify sender
+        -- Can verify message not changed
+
+What we want:
+    - no two strings hash to same value
+    - Mathematically possible for two strings to get same hash
+        -- computationally infeasable 
+
+
+Firewall
+--------
+    - Packet filter
+
+    - Stateless
+        -- every packet handled stand alone
+    - Stateful
+        -- knowledge of previous packets
+            - Circuit level
+                -- terminates TCP connections
+
+    - Get through a firewall
+        -- Find bug in rules
+        -- Crash the box and the firewall rules dont apply
+        -- Misuse a port number

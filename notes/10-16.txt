@@ -1,0 +1,215 @@
+EXAM REVIEW
+-----------
+
+Week 1:
+    - History
+        -- caveman
+        -- greeks
+        -- optical telegraph (napoleon)
+        -- elctromagnetic telegraph
+        -- telephone
+        -- internet
+    - Fundamental Measures
+        -- throughput
+        -- delay
+        -- loss
+        -- cost
+            - OPEX
+            - CAPEX
+        -- mobility
+        -- robustness
+        -- secrecy
+        -- QoS
+    - Basic Model
+        -- sender, channel, noise
+        -- encode, send, decode
+        -- coding and info theory
+    - Nodes
+        -- end nodes, intermediate nodes
+        -- bus, things hanging off bus
+            - cpu
+            - i/o
+            - mem
+        -- adapter is key to nodes
+    - Tasks
+        -- message formatting
+        -- error detection + correction
+        -- addressing
+        -- routing
+        -- flow control
+        -- security
+        -- management
+        -- QoS
+    - OSI Model
+        -- 7 layers
+    - Internet Model
+        -- 5 layers
+    - Defintions
+        -- protocol
+        -- interface
+        -- layering
+        -- open concept
+    - Standards
+        -- IEEE
+        -- IETF
+        -- ISO
+        -- ITU
+
+Week 2:
+    - What is the internet?
+        -- physical, service, edge, core, packet VIEWS
+    - 4 factors of delay
+        -- processing
+        -- propogation
+        -- transmission
+        -- queueing
+    - 2 facotrs of loss
+        -- overflow
+        -- electrical noiseA
+    - Tools
+        -- ping
+        -- traceroute
+    - QoS
+        -- requirements an application puts on the network
+
+Week 3:
+    - Application layer protocols
+        -- 5 elements
+            - service
+            - assumtions
+            - vocab
+            - endcoding
+            - rules
+    - HTTP
+        -- packet headers
+        -- HTTP headers
+            - requests
+                -- get, etc...
+            - response
+                -- 404, 200, etc...
+        -- HTML processing
+        -- HTTP 1.0 vs 1.1
+    - SMTP
+        -- email
+        -- SMTP servers
+        -- user agents/clients
+        -- POP
+        -- IMAP
+        -- HTTP
+    - FTP
+        -- 2 connections
+            -- command
+            -- data
+    - DNS
+        -- hierachical
+        -- distributed phonebook for internet
+    - P2P
+        -- client + server
+            - all in one node
+    - Client-Server
+        -- request-response
+
+Week 4:
+    - Sockets API
+        -- file i/o paradigm
+        -- some functions that block
+    - Client-Server flowchart
+        -- streams
+            - TCP
+        -- datagram
+            - UDP
+        -- code
+            - tcpServer.c / tcpClient.c
+            - udpServer.c / udpClient.cA
+    - Datastructures for addresses
+    - Helper functions
+        -- gethostbyname
+        -- gethostbyaddress
+    - Threads
+        -- lightweight process
+    - Webserver design
+        -- weblite.c
+
+Week 5:
+    - Transport layer
+        -- mult/demult
+        -- reliable data trasnport
+        -- congestion control
+    - FSM
+        -- state
+        -- transitions
+            - event / action
+    - RDT from the book
+        -- RDT 3.0 sender
+        -- RDT 2.0 reciever
+        -- alternating bit protocol
+            - Stop-And-Wait
+    - Packet flow diagrams / timing diagrams
+        -- sender -> reciever -> sender -> etc...
+    - Analysis
+        -- formulas for U in notes
+            - utilization
+        -- t_useful, t_overhead, t_prop, t_frame, t_ack, etc...
+        -- U = low for t_prop > t_frame
+        -- Sliding window
+            - U_sw = N * t_frame / ...
+        -- Window used for flow or congestion control
+
+Week 6:
+    - TCP and UDP
+    - TCP header
+        -- port #s
+        -- sequence / ack #
+        -- flags
+        -- checksum
+        -- window size
+    - UDP header
+        -- port #
+        -- checksum
+    - TCP
+        -- 3-way handshake for connection
+        -- FIN-ACK, FIN-ACK
+        -- RST
+        -- Syn-attack
+    - RTO determination
+        -- old
+            - smoothing of RTT, multiplied by 2
+        -- new
+            - same as old, but meausred variabilty and added to RTO as
+              appropriate
+        -- dont sample on timeout
+        -- double RTO on timeout
+    - Congestion Control (TCP)
+        -- slow start
+        -- congestion control (drop window size)
+            - sawtooth graph
+    - Congestion Control in general
+    - Fairness
+        -- proportional
+        -- max-min
+    - Rate control
+
+Week 7:
+    - Security
+        -- What is network security?
+        -- What Trudy can do?
+    - Cryptosystems
+        -- secret key (symmetrical)
+            - DES
+            - AES
+        -- PKC
+        -- Certificate authority
+    - Authentication
+        -- ap1.0 -> ap5.0
+        -- playback attack
+        -- nonce
+    - Digital signitures
+        -- hash
+    - Firewall (packet filter)
+        -- stateless
+        -- stateful
+    - Intrusion Detection System (IDS)
+        -- signature
+            - pattern of packets
+        -- anomaly
+    - SSL
