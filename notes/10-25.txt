@@ -1,0 +1,93 @@
+Review
+------
+Route selection
+    - centralized, decentralized
+Criteria
+    - fast, simple, low overhead, not create loops, stable, converges
+
+Instability can be a big issue
+    - oscillation, route flapping
+
+Two flavors
+    - link-state
+        -- dijkstra, ospf
+    - distance-vector
+        -- bellman-ford, RIP
+
+Types of networks
+    - interior
+        -- aka autonomous
+    - exterior
+
+Dijkstra's Algorithm
+    - find the shortest path from a given node to all other nodes by developing
+      paths in order of increasing path lengths
+
+Bellman-ford
+    - exchange routing tables neighbor-to-neighbor. use this information to
+      develop least cost routes
+
+
+Switch Design
+-------------
+See notes
+
+
+IP Addr
+-------
+IP is the narrow waist of the internet. The network layer has one protocol
+choice: IP.
+
+IPv4
+    - Header
+        -- Version
+            - 4 or 6
+        -- length
+            - length of the header (in words)
+        -- type of service
+            - not used?
+        -- total length
+            - packet length
+        -- identifier
+            - unique value used to identify the datagram
+        -- flags
+            - fragmentation allowed?
+        -- offset
+            - fragment offset
+        -- ttl
+            - # router hops
+        -- protocol
+            - next layer
+        -- header checksum
+        -- source + destination ip addresses
+            - 32 bits
+
+IP addresses are hierarchical
+    - net_id.host_id
+    - router tables only know the net_id
+
+Historically, we had address classes:
+    - class A
+        -- see notes
+    - class B
+        -- see notes
+    - class C
+        -- see notes
+    - class D
+
+    - Wasteful of addresses
+
+ICANN
+    - RFC 2050
+
+Classless Interdomain Routing (CIDR)
+    - a.b.c.d/x
+        -- x == # bits in net_id
+            - net_id == subnet
+            - for routing we match the longest prefix
+
+Lease an IP address
+    - DHCP
+        -- dynamic host config protocol
+        -- RFC 2131
+    - NAT

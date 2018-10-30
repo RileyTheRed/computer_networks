@@ -1,0 +1,48 @@
+Datagram
+    - packets can take different paths, can arrive out of order, find shorter
+      path, etc
+
+Virtual Circuit
+    - a single static route
+
+How to select routes?
+    - centralized method
+        -- link state
+            - all the routers know the link status of other routers
+    - decentralized (distributed) method
+        -- distance vector
+            - routers exchange routing tables with each other
+
+When selecting a route, we need to take into account:
+    - the path
+        -- {a, b, c}
+    - the path cost
+        -- {0, 1, 3}
+
+        (A -> B -> C)
+
+Criteria of a good algorithm?
+    - converge to optimal solution
+    - fast
+    - simple
+    - stable
+    - generate low network traffic
+    - does not create loops
+
+
+What algorithms do we use for the two methods to select a route?
+    - centralized
+        -- dijsktra
+            - OSPF: open shortest path first
+                -- currently used in internet
+    - distributed
+        -- bellman ford
+            - RIP: routing information protocol
+                -- early arpanet
+
+
+Two classes of routing protocols:
+    - interior
+        -- used within a (local) network
+    - exterior
+        -- used outside a (local) network (think internet)
