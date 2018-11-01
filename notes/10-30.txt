@@ -1,0 +1,84 @@
+Review
+------
+IPv4 header
+
+Switch = input buffer - fabric - output buffer
+
+3 generations of switches
+    1) shared memory
+    2) bus
+    3) interconnect network
+
+Line card - adapter with additional functionality
+
+IPv4 address : ~4 billion addresses
+    - net_id.host_id
+
+CIDR - classless interdomain routing
+DHCP - dynamic host config protocol
+NAT
+
+
+-------
+
+
+NAT - RFC 3022
+--------------
+Network address translation
+"Private IP addresses"
+
+Insulates your home network from the internet. Your home netowrk has ONE
+address, all devices in your home network then have NAT addesses : 10.0.0.1,
+10.0.0.2, ....
+
+Uses port numbers to map IP addresses
+
+
+IPv6
+----
+128 bit addresses
+    - 6 * 10^23 addresses per square meter of earth
+
+Flow label
+    - differentiated services
+
+Three types of addresses
+    - Unicast
+        -- one to one
+    - Anycast
+        -- find next
+    - Multicast
+        -- one to many
+        -- instead of having multiple physical lines from server to other hosts,
+          the server sends infomation to a multicast network of routers;
+        -- The router does all the resending and amplification
+        -- application multicast
+            -- clients repeat messagess
+
+
+IPv4 to IPv6 transition
+-----------------------
+Cannot have a "flag day"
+
+Dual stack
+    - both servicing at once
+
+Tunneling
+    - we have to use IPv4, but when communicating between each other perhaps we
+      can use IPv6? (tunnel IPv6 packet inside an IPv4 header)
+    - If the routers between us are IPv4, but we are using IPv6, then we can
+      embed our IPv6 packet inside the IPv4 packet
+
+IoT is a driver for IPv6
+
+
+ARP
+---
+Address resolution protocol
+
+How do we associate an IP address with a layer-2 address (MAC address)?
+(Ask someone for the written down example from class)
+    - A wants to communicate with B
+    - A brodcasts to all (B,C)
+    - B replies
+    - A now knows B's MAC address
