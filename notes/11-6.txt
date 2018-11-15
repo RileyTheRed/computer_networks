@@ -1,0 +1,144 @@
+Review
+------
+L2 serivices
+    - framing
+    - link access
+    - error detection
+    - others
+
+Serial comm
+    - start/stop bits
+    - parity bit
+
+Analysis
+    - see last weeks notes for the formulas for probablitiy of errors
+    - assume that:
+        -- bit errors are iid(?) (independent)
+        -- start/stop bits are not in error
+
+Framing
+    - SDEL
+    - EDEL
+
+
+CRC
+---
+For k-bit message, add n-bit CRC
+Frame T has k+n bits
+
+CRC is such that a frame T is evenly divisible by generator polynomial P
+    - if this condition holds, we have either:
+        -- no errors
+        -- no detectable errors
+
+T = (n + k) bit frame
+M = k-bit message
+F = n-bit CRC
+P = (n + 1) bit generator polynomial
+
+T = 2^n * M + F
+F = remainder((2^n * M)/P)
+
+For the two formulas above, lets keep in mind modulo-2 arithmatic
+    - XOR is importnant
+
+How to select P?
+    - we can hire an intelligent mathemetician!
+
+P is selected so that we can detect:
+    - all single-bit errors
+    - all double bit errors
+    - any odd # errors
+    - any burst error less than n-bits
+    - many burst errors more than n-bits
+
+Example:
+    - see notes
+
+
+Sharing a channel
+-----------------
+Four ways
+    1) FDM
+        - frequency division multiplexing
+        - EE magic
+
+    2) TDM
+        - time division multiplexing
+        - channel is partitioned into slots
+        - a frame has N slots
+            -- slots are reserved for a user
+
+        - Example:
+            -- T1 = 1.544 Mb/s
+            -- || 1  | 2  | 3  | 4  |...|
+            -- first slot is 1 bit, all others are 8 bit slots
+            -- 8000 frames per second
+            -- 8000 * (24 * 8 + 1) = 1.544 Mb
+
+    3) Contention
+        - CSMA/CD
+            -- carrier sense multiple access / collision detection
+        - Steps
+            -- listen, if idle talk
+            -- if collide, backoff and try again later
+
+    4) Token passing
+        - potentially more overhead
+        - steps
+            -- receive a token, then talk
+            -- pass token to next station when done talking
+
+
+Local Area Network (LAN)
+------------------------
+Data network optimized for a medium sized area
+    - 10's to 100's of stations
+    - 100's to 1000's of meters
+
+Owned and operated by a single organization
+
+Basically, a building-scale network
+
+Categories
+    - media
+        -- copper, fiber, wireless
+    - topology
+        -- direct, star
+    - medium access control
+        -- contention, token passing
+
+
+LAN Topology
+------------
+See notes
+
+Trade-offs
+    - scaling
+    - standard
+        -- EIA 568 something (star wired standard)
+            - maximum distance from wiring closet to station is 100 meters
+
+
+First LAN: ALOHA
+----------------
+Norm Abramson came up with it
+Hawaii
+
+How to connect main campus to branch campus?
+    - mainframe
+
+He created packet radio
+To use packet access, he needed a:
+    - protocol
+
+Along comes ALOHA
+    - additive links on-line hawaii area
+
+ALOHA is very simple:
+    - put data in fixed length a[packet, send it
+    - if receive an ACK it was received, else send it again later
+    - Utilization = 18%
+
+SLOTED ALOHA
+    - Utilization = 36%

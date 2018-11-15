@@ -1,0 +1,95 @@
+Review
+------
+CRC
+    - see notes
+Ssharing a channel
+    - 4 ways
+        -- FDM, TDM, contention, token passing
+        -- TDM
+            - dedicated slots, e.g., T1 = 1.544 Mb/s
+LAN
+    - defintion
+    - categories
+        -- media, topology, access control
+    - direct wired -> star wired
+        -- star wired is standardized
+ALOHA
+    - norm abramson
+        -- surfer
+    - first LAN - wireless packet radio
+    - unslotted U = %18
+    - slotted = %30
+
+
+Ethernet
+--------
+Topology
+    - 10Base5
+        -- 10 Mb/s
+        -- direct wired coax
+        -- 500 meters
+    - 10Base2
+        -- ran on thinner coax
+        -- still direct wired
+        -- 200 meters
+    - 10BaseT
+        -- star wired
+        -- UTP (unshielded twisted pair?)
+            - phone cabling
+        -- had hub or repeater
+            - bus or collision domain
+    - 100BaseT
+    - 1000BaseT
+    - 10G
+        -- useful for datacenters
+    - 40G-100G
+        -- useful for datacenters
+
+CSMA/CD
+    - carrier sense multiple acess / collision detection
+
+    - (1) if medium is idle then transmit
+    - (2) if medium is busy then wait until idle and then transmit
+    - (3) if detect collision then transmit a brief jam signal, stop
+      transmition, and wait a random period of time then (1)
+
+BEB
+    - binary exponential backoff
+
+    - while attempts < backoff_limit
+        k := Min(attempts, 10)
+        r := Rand(0, 2^k)
+        delay := r * slot_time
+
+    - backoff_limit = 16
+    - each collision attempts in incremented
+    - set to zero on successful transmission
+
+Collisions
+    - see notes
+
+Token Ring
+    - IEEE 802.5
+    - IBM
+    - see notes for drawing
+
+    - token circulates
+    - station that wants to transmit changes token from free to busy and appends
+      frame
+    - sender strips frame and releases token
+        -- for fairness
+    - deterministic
+
+Bridging
+--------
+Layer 2
+Forwards only those frames not addressed to local stations
+    - MAC address
+Basically a traffic filter
+
+Why a bridge?
+    1) performance
+        - the BIG deal
+    2) reliability
+    3) security
+    4) politics

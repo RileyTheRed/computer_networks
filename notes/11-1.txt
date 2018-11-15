@@ -1,0 +1,107 @@
+Review
+------
+NAT
+IPv6
+    - 128 bit address
+    - flowspec
+    - unicast, multicast, anycast
+Multicast
+    - reduce bottleneck
+    - routers duplicate packets
+ARP
+    - ARP cache IP addr - MAC addr
+    - L2 broadcast
+Router Internals
+    - Ports
+    - routing table
+        - routing protocol
+    - label swapping
+    - port swapping
+
+
+Layer 2
+-------
+Provides point-to-point communications
+LANs
+    - local area network
+    - IEEE 802.3 == ethernet
+    - IEEE 802;11 == wifi
+
+Services
+    - framing
+        -- encapsulation of layer 3 packet
+    - link access
+        -- sharing a medium
+    - error detection
+    - error correction
+    - flow control
+
+The most important services we will be focusing on are framing, link access, and
+error detection.
+
+Adapter - layer 1, 2
+    - NIC
+        -- network interface controller
+
+
+Framing
+-------
+Where does my data begin and end?
+
+Serial
+    - define a start and stop bit
+        -- start = 0
+        -- stop = 1
+        -- size of word is known
+
+To delimit a frame (multiple words), we need to define the notion of a start and
+stop delimiter. Physical layer detects the initial signal.
+
+
+Error Detection
+---------------
+Parity
+    - very simple form of checksum
+    - parity bit appended to each word
+    
+Even parity
+    - parity is 1 or 0 such that the sum of all bits is even
+Odd parity
+    - parity is 1 or 0 such that the sum of all bits is odd
+
+Set parity bit at the sender
+Check parity bit at receiver
+
+Can detect single bit error
+    -  can not detect double bit errors
+
+* Can detect odd # bit errors
+* Can not detect even # bit errors
+
+
+Analysis
+--------
+Assume start, stop bits not corrupted
+Assume Pb = P(bit error)
+Assume bit errors are independent
+N bits in word (including parity)
+
+If my noise events are longer than the bit, and one bit is bad, then another bit
+is almost certainly bad. (The assumptions above then are no reasonable)
+
+P(no error in word) = (1 - Pb)^N
+P(error in word) = 1 - (1 - Pb)^N
+P(detectable error) = SUM(N, k = 1,3,...) (n chose k) * Pb^k * (1 - Pb)^(N-k)
+    - binomial probability
+P(undetectable errors) = same as detectable but k = 2,4,6,...
+
+
+Frame Check Sequence
+--------------------
+SDEL ---------------------- FCS --- EDEL
+
+FCS
+    - layer 2 trailer
+    - a cyclic redundancy code (CRC)
+        -- better checksum
+        -- detect more errors than checksum
