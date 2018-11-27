@@ -1,0 +1,127 @@
+Review
+------
+Network Management
+    - defintion (saydam, FCAPSS)
+        -- ** (page 421 in textbook for saydam def)
+    - SNMP
+        -- Manager
+        -- Agent + MIB
+        -- GET, SET, TRAP
+    - MRTG
+
+NFV
+    - virtual = appearance of, but not form of
+    - NFV virtualizes network infrastructure
+        -- switches, routers, firewalls
+
+
+
+Software Defined Network
+------------------------
+Todays network equipment are closed.
+So, what we have:
+    - centralized control
+        -- easier
+    - open interfaces
+        -- innovation
+
+VMware bought Ncira for 1.26 BILLION in 2012
+    - DAMN!!
+
+Programming language used to program SDNs
+    - P4
+
+
+
+
+Final Exam Review
+-----------------
+10 questions
+1 extra credit question
+
+each worth 10 points
+1 page cheat sheet
+
+~5 questions post midterm
+
+HW solutions
+Old exams
+Midterm solutions
+
+
+
+Layer 3 (chapter 4 & 5)
+    - services: 
+        -- forwarding
+        -- routing
+    - routing
+        -- algorithms for shortest path (least cost path)
+            - dijkstras, bellman ford
+        -- cost metrics: hops, etc
+    - protocols
+        -- link-state OSPF
+        -- distance vectors RIP
+    - forwarding
+        -- ARP
+        -- how a router forwards packets
+    - switch generations
+        -- shared memory
+        -- shared bus
+        -- switch fabric
+    - IPv4 (header)
+        -- address conservation
+            - classless addressing
+            - DHCP
+            - NAT
+    - IPv6
+        -- 128 bit addresses
+        -- IoT will drive adoption
+
+
+Layer 2 (chapter 6)
+    - framing
+    - who uses CRC? checksum?
+    - error detection (parity + CRC)
+        -- analysis
+    - sharing channel
+        -- FDM, TDM, contention, token passing
+            - TDM == T1
+    - defintion of LAN
+        -- topology
+            - direct
+            - star
+                -- EIA 568
+                -- 100 meters
+        -- media type
+        -- media access
+    - ethernet
+        -- IEEE 802.3
+        -- History
+            - 10base5
+            - 10base2
+            - 10baseT
+        -- CSMA/CD + BEB ***
+        -- worst case collision
+        -- minimum frame size
+    - token ring (IEEE 802.5)
+        -- sender releases token
+    - bridges
+        -- defintion
+        -- tables
+        -- algorithm
+            - transparent bridge
+        -- spanning tree
+
+
+Wireless (Chapter 7)
+    - infrastructure + ad hoc
+    - different from wired
+    - wifi (802.11)
+        -- CSMA/CA
+        -- frame format
+    - cellular networks
+    - saftey / sar?
+
+
+Network management
+NFV + SDN

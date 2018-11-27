@@ -1,0 +1,133 @@
+Review
+------
+Bridges are filters
+
+Bridge table
+    - self learning
+    - spanning tree
+
+Wirelesss
+    - two nodes
+    - infrasstructure, ad hoc
+
+Challenges
+    - signal strength, interference, multipath distortion, mobility
+
+Hidden terminal probelm
+
+
+Wi-fi
+-----
+Wired fidelity
+802.11a, b, g, n, ac, etc...
+
+    - a = 11 Mbs
+    - g = 54 Mbs
+    - a = 54 Mbs
+    - n = 450 Mbs
+    - ac = 1300 Mbs
+
+All of the above use CSMA/CA
+     - CA == collision avoidance
+
+    - why not CD?
+        -- can't listen when transmitting
+
+    - goal is to avoid collisions
+
+
+CSMA/CA
+-------
+(1) if sense channel idle for DIFS then
+        transmit entire frame
+(2) if sense channel busy then
+        start random backoff time
+        timer counts down while channel is idle
+        transmit when time expires
+        if no ACK, increasse backoff time then (2)
+(3) if frame received OK
+        return ACK after SIFS
+
+
+Router to Host
+--------------
+1) Router ARPr for host addr
+2) Router sends ethernet frame with
+    - DA = host MAC address
+    - SA = router port MAC address
+3) AP receives ethernet frame and converts to 802.11
+    - Addr1 = host MAC addr
+    - Addr2 = AP MAC addr
+    - Addr3 = Router MAC addr
+
+
+Host to AP
+----------
+Addr1 = AP MAC
+Addr2 = Host MAC
+Addr3 = Router MAC
+
+
+AP to Router
+------------
+DA = router MAC
+SA = host MAC
+
+
+Wifi Cont.
+----------
+Medium distance, high speed
+    - basically an ethernet replacement
+
+
+Bluetooth
+---------
+Short distance, high speed
+    - meant to be a bus replacement
+
+
+Zigbee
+------
+short distance, low data rate
+    - control
+    - power meters, light switches, etc.
+
+
+Sensor networks
+---------------
+disposable wireless device
+    - sensor + cpu/mem + transceiver
+
+
+Cellular communications
+-----------------------
+telephony anywhere, anytime
+
+two flavors
+    - GSM
+        -- TDM
+    - CDMA
+        -- FDM
+
+1G
+    - analog voice
+2G
+    - voice + slow data
+3G
+    - faster 2G
+4G
+    - faster 3G
+5G
+    - faster 4G
+
+
+Wireless safety
+---------------
+Microwaves
+    - heats tissue
+    - dna changes?
+    - cancer?
+
+Government defined
+    - specific absorbtion rate (SAR)
+        -- 1.6 W/kg
